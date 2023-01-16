@@ -1,0 +1,115 @@
+@charset "UTF-8";
+@import url('https://fonts.cdnfonts.com/css/finger-paint');
+*{
+    font-family: 'Finger Paint';
+    user-select: none;
+}
+body { background-color: #222; }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+}
+
+h1 {
+    margin-top: 0.05em;
+    font-size: 8.5rem;
+}
+
+span.tic { color: #00a2cf;}
+span.tac { color: #00ba63;}
+span.toe { color: #7700ff;}
+  
+section.playerTurnShow {
+    font-size: 4.5rem;
+    margin-top: -0.35em;
+}
+
+table {
+    margin-top: 1em;
+    border-collapse: collapse;
+    border: none;
+  }
+  
+td {
+    width: 200px;
+    height: 200px;
+    border: 10px solid #eee;
+    text-align: center;
+    font-size: 5em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color .5s;
+}
+
+td[class^='1r'] { border-top: none; }
+td[class^='3r'] { border-bottom: none; }
+td[class*='1c'] { border-left: none;}
+td[class*='3c'] { border-right: none;}
+  
+td:hover { background-color: #333; }
+  
+button {
+    width: 300px;
+    margin: 50px 10px;
+    padding: 20px 50px;
+    border: none;
+    border-radius: 8px;
+    background-color: #333;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button#start { margin-right: 10px; }
+button:hover { background-color: #555; }
+button:active { transform: translateY(2px); }
+
+/* Formatowanie responsywnosci */
+@media only screen and (max-width: 1100px) {
+  h1 { font-size: 5rem; }
+
+  section.playerTurnShow { font-size: 2.5rem; }
+
+  td {
+    width: 100px;
+    height: 100px;
+    font-size: 3em;
+    border: 5px solid #eee;
+  }
+
+  button {
+    padding: 15px 25px;
+    font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+  h1 { font-size: 4rem; }
+
+  section.playerTurnShow { font-size: 2.5rem; }
+
+  td { border: 5px solid #eee; }
+
+  button {
+    width: 195px;
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  h1 { font-size: 3rem; }
+
+  section.playerTurnShow { font-size: 1.5rem; }
+
+  td { border: 5px solid #eee; }
+
+  button {
+    width: 145px;
+    padding: 10px;
+    font-size: 14px;
+  }
+}
